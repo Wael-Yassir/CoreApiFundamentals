@@ -1,9 +1,8 @@
-﻿namespace CoreCodeCamp.Data
+﻿namespace CoreCodeCamp.Models
 {
-    public class Location
+    public class LocationModel
     {
-        public int LocationId { get; set; }
-        public string VenueName { get; set; }
+        public string Venue { get; set; }
         public string Address1 { get; set; }
         public string Address2 { get; set; }
         public string Address3 { get; set; }
