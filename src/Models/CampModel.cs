@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 
 namespace CoreCodeCamp.Models
 {
@@ -9,5 +10,6 @@ namespace CoreCodeCamp.Models
         public DateTime EventDate { get; set; } = DateTime.MinValue;
         public LocationModel Location { get; set; }
         public int Length { get; set; } = 1;
+        public ICollection<TalkModel> Talks { get; set; }
     }
 }
