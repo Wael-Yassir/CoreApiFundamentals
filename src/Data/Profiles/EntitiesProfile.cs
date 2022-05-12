@@ -7,7 +7,7 @@ namespace CoreCodeCamp.Data.Profiles
     {
         public CampProfile()
         {
-            this.CreateMap<Camp, CampModel>();
+            this.CreateMap<Camp, CampModel>().ReverseMap();
         }
     }
 
@@ -16,14 +16,14 @@ namespace CoreCodeCamp.Data.Profiles
         public LocationProfile()
         {
             this.CreateMap<Location, LocationModel>()
-                .ForMember(lm => lm.Venue, o => o.MapFrom(l => l.VenueName));
+                .ForMember(lm => lm.Venue, o => o.MapFrom(l => l.VenueName)).ReverseMap();
         }
     }
     public class TalkProfile : Profile
     {
         public TalkProfile()
         {
-            this.CreateMap<Talk, TalkModel>();
+            this.CreateMap<Talk, TalkModel>().ReverseMap();
         }
     }
 
@@ -31,7 +31,7 @@ namespace CoreCodeCamp.Data.Profiles
     {
         public SpeakerProfile()
         {
-            this.CreateMap<Speaker, SpeakerModel>();
+            this.CreateMap<Speaker, SpeakerModel>().ReverseMap();
         }
     }
 }
